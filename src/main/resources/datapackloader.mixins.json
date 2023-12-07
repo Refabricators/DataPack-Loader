@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.hadroncollision.datapackloader.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "MinecraftServerMixin"
+  ],
+  "client": [
+    "CreateWorldScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
