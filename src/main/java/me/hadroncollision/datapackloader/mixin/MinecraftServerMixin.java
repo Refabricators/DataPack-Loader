@@ -1,6 +1,7 @@
 package me.hadroncollision.datapackloader.mixin;
 
 import me.hadroncollision.datapackloader.DataPackLoader;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.resource.*;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.server.MinecraftServer;
@@ -17,7 +18,8 @@ public class MinecraftServerMixin {
 				new FileResourcePackProvider(
 						DataPackLoader.DATAPACKS_PATH,
 						ResourceType.SERVER_DATA,
-						DataPackLoader.RESOURCE_PACK_SOURCE
+						DataPackLoader.RESOURCE_PACK_SOURCE,
+						MinecraftClient.getInstance().getSymlinkFinder()
 				)
 		);
 	}
